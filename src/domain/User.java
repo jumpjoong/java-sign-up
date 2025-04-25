@@ -1,8 +1,8 @@
 package domain;
 
 public class User {
-    private String id;
-    private String pw;
+    private final String id;
+    private final String pw;
 
     public User(String id, String pw) {
         this.id = id;
@@ -15,5 +15,10 @@ public class User {
     //로그인할 때 사용할 메서드
     public boolean checkPw (String pw) {
         return this.pw.equals(pw);
+    }
+
+    @Override
+    public String toString() {
+        return this.id;
     }
 }
